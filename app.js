@@ -9,6 +9,10 @@ app.listen(3001,()=>{
 //细节-1：设置默认模板引擎
 app.set('view engine','ejs');
 app.set('views','./views'); //设置默认的模板路径
+//细节-2：托管静态资源
+app.use('/node_modules',express.static('node_modules'));
+app.use('/assets',express.static('assets'));
+
 
 //导入路由模块
 var indexRouter = require('./rounter/indexRouter.js');

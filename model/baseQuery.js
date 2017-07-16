@@ -4,12 +4,13 @@ var mysql = require('mysql');
 var connection = mysql.createConnection({
     host:'127.0.0.1',
     user:'root',
-    password:'123456',
+    password:'root',
     database:'blog'
 });
-// module.exports = connection;
-    var sqlstr = 'select * from users';
-        connection.query(sqlstr,(err,results)=>{
-            console.log(results);
-        })
-        connection.end();
+ module.exports = connection;
+ //测试数据连接状态：
+    // var sqlstr = 'select * from users';
+    //     connection.query(sqlstr,(err,results)=>{
+    //         console.log(results);
+    //     })
+    //     connection.end();

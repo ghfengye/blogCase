@@ -7,6 +7,6 @@ var indexCtrl = require('../controller/indexCtrl.js');
 var router = express.Router();
 //路由分发
 router
- .get('/index',indexCtrl.showIndexPage);
+ .get('/',indexCtrl.showIndexPage);
     //暴露router
 module.exports = router;
